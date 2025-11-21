@@ -9,9 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
     "@radix-ui/react-avatar": "^1.1.11",
@@ -40,24 +37,29 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.487.0",
     "motion": "^11.11.17",
+    "next": "16.0.3",
+    "nodemailer": "^7.0.10",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-resizable-panels": "^2.1.7",
     "tailwind-merge": "^2.2.0",
     "vercel": "^48.10.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^7.0.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
-    "tailwindcss": "^4",
-    "typescript": "^5",
-    "@eslint/js": "^9.9.1",
-    "autoprefixer": "^10.4.21",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
-    "postcss": "^8.5.6"
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

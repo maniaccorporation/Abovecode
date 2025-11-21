@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client"; // Add this at the very top
+"use client";
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Users, Clock, Star, MessageCircle, Calendar, Zap } from 'lucide-react';
 import { Button } from './ui/button';
@@ -8,11 +8,7 @@ import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Label } from './ui/label';
 import { Card } from './ui/card';
-// 👇 FIX: Corrected import for framer-motion
 import { motion } from 'framer-motion';
-// 👆 FIX: Corrected import for framer-motion
-
-// The previously noted unused CSS module import has been removed.
 
 interface FormData {
   parentName: string;
@@ -95,8 +91,7 @@ export function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // 👇 THIS IS THE NEW CODE
-      // It sends the form data to your new server at http://localhost:3001
+      // 👇 Sends data to src/app/api/send-email/route.ts
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -104,16 +99,10 @@ export function ContactPage() {
         },
         body: JSON.stringify(formData),
       });
-      // 👆 END OF NEW CODE
 
       if (!response.ok) {
-        // Handle server-side errors
         throw new Error('Server responded with an error');
       }
-
-      // If the email was sent successfully by the server
-      const result = await response.json();
-      console.log(result.message); // "Email sent successfully!"
 
       setIsSubmitted(true);
       setFormData({
@@ -129,7 +118,6 @@ export function ContactPage() {
 
     } catch (error) {
       console.error('Form submission error:', error);
-      // You can add an error message for the user here
       setErrors(prev => ({ ...prev, submit: 'Failed to send message. Please try again.' }));
     } finally {
       setIsSubmitting(false);
@@ -148,7 +136,6 @@ export function ContactPage() {
     { value: 'coding', label: 'Coding Fundamentals' },
     { value: 'math', label: 'Math Excellence' },
     { value: 'abacus', label: 'Abacus Mastery' },
-    // Since the user is using ABBU, I'll prioritize that as a program
     { value: 'uxui', label: 'UX/UI Design' },
     { value: 'combo', label: 'Combined Program' },
     { value: 'consultation', label: 'General Inquiry' }
@@ -224,10 +211,8 @@ export function ContactPage() {
   }
 
   return (
-    // FIX: Replaced bg-gradient-to-br with bg-linear-to-br
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -242,7 +227,6 @@ export function ContactPage() {
           </p>
         </motion.div>
 
-        {/* Contact Reasons */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {contactReasons.map((reason, index) => (
             <motion.div
@@ -263,7 +247,6 @@ export function ContactPage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Contact Form */}
           <div className="lg:col-span-2">
             <motion.div
               className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl"
@@ -437,7 +420,6 @@ export function ContactPage() {
             </motion.div>
           </div>
 
-          {/* Contact Information Sidebar */}
           <div className="space-y-6">
             <motion.div
               className="bg-white p-8 rounded-2xl shadow-lg"
@@ -449,7 +431,6 @@ export function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  {/* FIX: Replaced flex-shrink-0 with shrink-0 */}
                   <div className="bg-blue-100 p-3 rounded-xl shrink-0">
                     <Phone className="h-5 w-5 text-blue-600" />
                   </div>
@@ -461,7 +442,6 @@ export function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  {/* FIX: Replaced flex-shrink-0 with shrink-0 */}
                   <div className="bg-purple-100 p-3 rounded-xl shrink-0">
                     <Mail className="h-5 w-5 text-purple-600" />
                   </div>
@@ -473,7 +453,6 @@ export function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  {/* FIX: Replaced flex-shrink-0 with shrink-0 */}
                   <div className="bg-orange-100 p-3 rounded-xl shrink-0">
                     <MapPin className="h-5 w-5 text-orange-600" />
                   </div>
@@ -486,7 +465,6 @@ export function ContactPage() {
             </motion.div>
 
             <motion.div
-              // FIX: Replaced bg-gradient-to-br with bg-linear-to-br
               className="bg-linear-to-br from-blue-600 to-purple-700 p-8 rounded-2xl shadow-lg text-white"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -496,7 +474,6 @@ export function ContactPage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  {/* FIX: Replaced flex-shrink-0 with shrink-0 */}
                   <Clock className="h-5 w-5 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold">Monday - Friday</p>
@@ -505,7 +482,6 @@ export function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  {/* FIX: Replaced flex-shrink-0 with shrink-0 */}
                   <Clock className="h-5 w-5 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold">Saturday</p>
@@ -514,7 +490,6 @@ export function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  {/* FIX: Replaced flex-shrink-0 with shrink-0 */}
                   <Users className="h-5 w-5 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold">Free Consultation</p>
