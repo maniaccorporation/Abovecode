@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
@@ -112,7 +113,7 @@ export function PricingTiers({ programName, programColor = "blue" }: PricingTier
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-16 bg-linear-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-12"
@@ -165,10 +166,10 @@ export function PricingTiers({ programName, programColor = "blue" }: PricingTier
                 </div>
 
                 {/* Features */}
-                <div className="space-y-3 mb-8 flex-grow">
+                <div className="space-y-3 mb-8 grow">
                   {tier.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start gap-3">
-                      <CheckCircle2 className={`w-5 h-5 ${tier.popular ? colors.accent : 'text-gray-600'} flex-shrink-0 mt-0.5`} />
+                      <CheckCircle2 className={`w-5 h-5 ${tier.popular ? colors.accent : 'text-gray-600'} shrink-0 mt-0.5`} />
                       <span className="text-gray-700 text-sm">{feature}</span>
                     </div>
                   ))}
@@ -199,7 +200,7 @@ export function PricingTiers({ programName, programColor = "blue" }: PricingTier
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <Card className="p-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0 rounded-2xl">
+          <Card className="p-8 bg-linear-to-r from-blue-50 to-purple-50 border-0 rounded-2xl">
             <h3 className="text-xl font-inter-tight mb-4 text-gray-900">💡 Need Help Choosing?</h3>
             <p className="text-gray-700 mb-4">
               Not sure which tier is right for your child? Our education specialists will help you select the perfect program tier based on your child's needs, learning goals, and schedule preferences.

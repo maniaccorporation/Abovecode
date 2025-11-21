@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
@@ -249,7 +250,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 text-white overflow-hidden">
+      <section className="relative py-20 bg-linear-to-br from-orange-500 via-pink-500 to-purple-600 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-yellow-300 rounded-full blur-3xl"></div>
@@ -325,7 +326,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
                   alt="Kids learning design"
                   className="w-full h-[500px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-900/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-trom-orange-900/50 to-transparent"></div>
               </div>
 
               {/* Floating Stats */}
@@ -461,7 +462,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
                       <div className="grid md:grid-cols-2 gap-3">
                         {level.topics.map((topic, topicIndex) => (
                           <div key={topicIndex} className="flex items-start gap-2">
-                            <CheckCircle2 className={`w-5 h-5 ${level.textColor} flex-shrink-0 mt-0.5`} />
+                            <CheckCircle2 className={`w-5 h-5 ${level.textColor} shrink-0 mt-0.5`} />
                             <span className="text-gray-700">{topic}</span>
                           </div>
                         ))}
@@ -476,7 +477,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
       </section>
 
       {/* Design Process */}
-      <section className="py-16 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
+      <section className="py-16 bg-linear-to-br from-orange-50 via-pink-50 to-purple-50">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-3xl mx-auto mb-12"
@@ -561,7 +562,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
                   <div className="grid md:grid-cols-2 gap-4">
                     {category.items.map((item, itemIndex) => (
                       <div key={itemIndex} className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
-                        <CheckCircle2 className={`w-5 h-5 ${category.color} flex-shrink-0 mt-0.5`} />
+                        <CheckCircle2 className={`w-5 h-5 ${category.color} shrink-0 mt-0.5`} />
                         <div>
                           <div className="font-semibold text-gray-900">{item.name}</div>
                           <div className="text-sm text-gray-600">{item.description}</div>
@@ -605,7 +606,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
               >
                 <Card className="p-8 border-0 rounded-2xl hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
-                    <div className={`${project.bgColor} p-3 rounded-2xl flex-shrink-0`}>
+                    <div className={`${project.bgColor} p-3 rounded-2xl shrink-0`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>
                     <div>
@@ -653,7 +654,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
                       viewport={{ once: true }}
                       whileHover={{ x: 8 }}
                     >
-                      <Pencil className="w-5 h-5 text-orange-600 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                      <Pencil className="w-5 h-5 text-orange-600 shrink-0 group-hover:scale-110 transition-transform" />
                       <span className="text-gray-700 font-medium">{principle}</span>
                     </motion.div>
                   ))}
@@ -671,7 +672,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
                       >
-                        <Star className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                        <Star className="w-5 h-5 text-orange-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                         <span className="text-gray-700">{outcome}</span>
                       </motion.div>
                     ))}
@@ -694,7 +695,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
                       alt="Students creating designs"
                       className="w-full h-[500px] lg:h-[600px] object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-orange-900/20 to-transparent"></div>
 
                     {/* Decorative floating elements */}
                     <motion.div
@@ -785,7 +786,7 @@ export function UXUIDesignProgramPage({ onNavigate }: UXUIDesignProgramPageProps
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 text-white">
+      <section className="py-20 bg-linear-to-br from-orange-500 via-pink-500 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-3xl mx-auto"

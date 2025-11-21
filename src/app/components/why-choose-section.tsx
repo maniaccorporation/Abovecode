@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { Card } from "./ui/card";
 import { motion } from "motion/react";
@@ -125,7 +126,7 @@ export function WhyChooseSection() {
               alt="Kids learning together in a group"
               className="w-full h-[400px] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-gray-900/70 via-gray-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
               <h3 className="text-2xl md:text-3xl mb-2 font-clash">Join 10,000+ Happy Students Worldwide</h3>
               <p className="text-lg text-gray-200">Experience learning that makes a difference in your child's life</p>

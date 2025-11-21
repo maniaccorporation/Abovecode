@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
@@ -6,7 +7,6 @@ import { Badge } from "./ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import {
   Code2,
-  Blocks,
   Cpu,
   Trophy,
   Clock,
@@ -23,7 +23,6 @@ import {
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { PricingTiers } from "./pricing-tiers";
 import codingKidsImage from "figma:asset/300a53e98355fbe0357cb9d38cc40126c1b26d4f.png";
-import React from "react";
 
 interface CodingProgramPageProps {
   onNavigate?: (page: "contact") => void;
@@ -182,7 +181,7 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white overflow-hidden">
+      <section className="relative py-20 bg-linear-to-br from-blue-600 via-blue-700 to-purple-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-300 rounded-full blur-3xl"></div>
@@ -254,11 +253,11 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src={codingKidsImage}
+                  src={codingKidsImage.src}
                   alt="Kids learning coding and robotics together"
                   className="w-full h-[500px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent bg-[rgba(0,0,0,0)]"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-blue-900/50 to-transparent bg-[rgba(0,0,0,0)]"></div>
               </div>
 
               {/* Floating Stats */}
@@ -373,7 +372,7 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
                       <div className="grid md:grid-cols-2 gap-3">
                         {level.topics.map((topic, topicIndex) => (
                           <div key={topicIndex} className="flex items-start gap-2">
-                            <CheckCircle2 className={`w-5 h-5 ${level.textColor} flex-shrink-0 mt-0.5`} />
+                            <CheckCircle2 className={`w-5 h-5 ${level.textColor} shrink-0 mt-0.5`} />
                             <span className="text-gray-700">{topic}</span>
                           </div>
                         ))}
@@ -388,7 +387,7 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
       </section>
 
       {/* Learning Methodology */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-16 bg-linear-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-3xl mx-auto mb-12"
@@ -463,7 +462,7 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
                 viewport={{ once: true }}
               >
                 <Card className="p-6 text-center border-2 border-gray-100 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all">
-                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-linear-to-br from-blue-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Cpu className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl mb-2 text-gray-900 font-inter-tight">{tool.name}</h3>
@@ -503,7 +502,7 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                     >
-                      <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
+                      <div className="bg-blue-100 p-2 rounded-lg shrink-0">
                         <Star className="w-5 h-5 text-blue-600" />
                       </div>
                       <span className="text-lg text-gray-700">{outcome}</span>
@@ -580,7 +579,7 @@ export function CodingProgramPage({ onNavigate }: CodingProgramPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+      <section className="py-20 bg-linear-to-br from-blue-600 to-purple-700 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-3xl mx-auto"

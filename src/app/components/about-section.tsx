@@ -1,10 +1,8 @@
 "use client";
-import React from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import { Code, Calculator, Grid3x3, Palette, ArrowRight } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 type Page = "home" | "coding" | "math" | "abacus" | "uxui";
 
@@ -112,9 +110,9 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
                     <Button
                       onClick={() => onNavigate(pillar.page)}
                       className={`w-full ${pillar.color === 'blue' ? 'bg-blue-600 hover:bg-blue-700' :
-                          pillar.color === 'green' ? 'bg-green-600 hover:bg-green-700' :
-                            pillar.color === 'orange' ? 'bg-orange-600 hover:bg-orange-700' :
-                              'bg-pink-600 hover:bg-pink-700'
+                        pillar.color === 'green' ? 'bg-green-600 hover:bg-green-700' :
+                          pillar.color === 'orange' ? 'bg-orange-600 hover:bg-orange-700' :
+                            'bg-pink-600 hover:bg-pink-700'
                         } text-white rounded-full mt-4`}
                     >
                       Explore Program

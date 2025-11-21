@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client"; // Add this at the very top
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
@@ -94,7 +95,7 @@ export function Navigation({ onNavigate }: NavigationProps) {
         <div className="flex items-center justify-between h-16 w-full" style={{ position: 'relative' }}>
           {/* Logo */}
           <motion.div
-            className="flex items-center gap-2 flex-shrink-0"
+            className="flex items-center gap-2 shrink-0"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

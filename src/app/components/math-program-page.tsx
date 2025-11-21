@@ -211,7 +211,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-600 via-blue-600 to-blue-700 text-white overflow-hidden">
+      <section className="relative py-20 bg-linear-to-br from-purple-600 via-blue-600 to-blue-700 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-orange-300 rounded-full blur-3xl"></div>
@@ -287,7 +287,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
                   alt="Kids learning mathematics"
                   className="w-full h-[500px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-purple-900/50 to-transparent"></div>
               </div>
 
               {/* Floating Stats */}
@@ -423,7 +423,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
                       <div className="grid md:grid-cols-2 gap-3">
                         {level.topics.map((topic, topicIndex) => (
                           <div key={topicIndex} className="flex items-start gap-2">
-                            <CheckCircle2 className={`w-5 h-5 ${level.textColor} flex-shrink-0 mt-0.5`} />
+                            <CheckCircle2 className={`w-5 h-5 ${level.textColor} shrink-0 mt-0.5`} />
                             <span className="text-gray-700">{topic}</span>
                           </div>
                         ))}
@@ -438,7 +438,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
       </section>
 
       {/* Learning Methodology */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-16 bg-linear-to-br from-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-3xl mx-auto mb-12"
@@ -514,7 +514,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
               >
                 <Card className="p-8 border-0 rounded-2xl hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
-                    <div className={`${feature.bgColor} p-3 rounded-2xl flex-shrink-0`}>
+                    <div className={`${feature.bgColor} p-3 rounded-2xl shrink-0`}>
                       <feature.icon className={`w-6 h-6 ${feature.color}`} />
                     </div>
                     <div>
@@ -557,7 +557,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                     >
-                      <div className="bg-purple-100 p-2 rounded-lg flex-shrink-0">
+                      <div className="bg-purple-100 p-2 rounded-lg shrink-0">
                         <Star className="w-5 h-5 text-purple-600" />
                       </div>
                       <span className="text-lg text-gray-700">{outcome}</span>
@@ -634,7 +634,7 @@ export function MathProgramPage({ onNavigate }: MathProgramPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-blue-700 text-white">
+      <section className="py-20 bg-linear-to-br from-purple-600 to-blue-700 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-3xl mx-auto"

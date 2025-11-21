@@ -142,7 +142,7 @@ export function ProgramsOverview({ onNavigate }: ProgramsOverviewProps) {
                         <div className="grid gap-2">
                           {program.highlights.map((highlight, idx) => (
                             <div key={idx} className="flex items-center gap-3">
-                              <CheckCircle2 className={`w-5 h-5 ${program.textColor} flex-shrink-0`} />
+                              <CheckCircle2 className={`w-5 h-5 ${program.textColor} shrink-0`} />
                               <span className="text-gray-700">{highlight}</span>
                             </div>
                           ))}
@@ -168,7 +168,7 @@ export function ProgramsOverview({ onNavigate }: ProgramsOverviewProps) {
                       alt={`${program.title} learning`}
                       className="w-full h-full min-h-[400px] object-cover"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${program.color} opacity-10`}></div>
+                    <div className={`absolute inset-0 bg-linear-to-br ${program.color} opacity-10`}></div>
                   </div>
                 </div>
               </Card>
@@ -178,7 +178,7 @@ export function ProgramsOverview({ onNavigate }: ProgramsOverviewProps) {
 
         {/* CTA Section */}
         <motion.div
-          className="mt-20 text-center max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-12 text-white"
+          className="mt-20 text-center max-w-4xl mx-auto bg-linear-to-br from-blue-600 to-purple-700 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -194,7 +194,7 @@ export function ProgramsOverview({ onNavigate }: ProgramsOverviewProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              onClick={() => onNavigate && onNavigate("contact")}
+              onClick={() => onNavigate && onNavigate("home")}
               className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-10"
             >
               Contact Us

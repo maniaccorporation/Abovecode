@@ -128,8 +128,8 @@ export function ProgramsSection({ onNavigate }: ProgramsSectionProps) {
                 key={group.id}
                 onClick={() => setActiveTab(group.id)}
                 className={`flex-1 p-6 rounded-3xl transition-all duration-300 text-left ${activeTab === group.id
-                    ? `${group.tabColor} text-white shadow-lg`
-                    : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-100'
+                  ? `${group.tabColor} text-white shadow-lg`
+                  : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-100'
                   }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -140,12 +140,12 @@ export function ProgramsSection({ onNavigate }: ProgramsSectionProps) {
               >
                 <div className="flex items-center gap-4">
                   <div className={`p-3 rounded-2xl ${activeTab === group.id
-                      ? 'bg-white/20'
-                      : group.lightColor
+                    ? 'bg-white/20'
+                    : group.lightColor
                     }`}>
                     <group.icon className={`w-6 h-6 ${activeTab === group.id
-                        ? 'text-white'
-                        : group.textColor
+                      ? 'text-white'
+                      : group.textColor
                       }`} />
                   </div>
                   <div>
@@ -228,7 +228,7 @@ export function ProgramsSection({ onNavigate }: ProgramsSectionProps) {
                         alt={`${group.title} learning environment`}
                         className="w-full h-full object-cover"
                       />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${group.color} opacity-10`}></div>
+                      <div className={`absolute inset-0 bg-linear-to-br ${group.color} opacity-10`}></div>
 
                       {/* Floating badges */}
                       <motion.div

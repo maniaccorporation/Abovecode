@@ -3,7 +3,7 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
-import { Code, Sparkles, Zap, Heart, Star, Palette, Brain, Rocket, Trophy, Target } from "lucide-react";
+import { Code, Sparkles, Star, Palette } from "lucide-react";
 
 type Page = "home" | "coding" | "math" | "abacus" | "uxui" | "contact";
 
@@ -13,7 +13,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ onNavigate }: HeroSectionProps = {}) {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="bg-linear-to-br from-blue-50 to-white min-h-screen flex items-center relative overflow-hidden">
       {/* Simple background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -128,7 +128,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps = {}) {
                 alt="Kids learning coding with laptops"
                 className="w-full h-[400px] md:h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-blue-600/20 to-transparent"></div>
             </div>
 
             {/* Simple Floating Elements */}

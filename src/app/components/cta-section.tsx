@@ -72,7 +72,7 @@ export function CTASection({ onNavigate }: CTASectionProps = {}) {
             transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-orange-400 to-pink-500 p-4 rounded-full shadow-lg border-4 border-white transform rotate-12">
+            <div className="bg-linear-to-br from-orange-400 to-pink-500 p-4 rounded-full shadow-lg border-4 border-white transform rotate-12">
               <Users className="w-8 h-8 text-white" />
             </div>
           </motion.div>
@@ -80,14 +80,14 @@ export function CTASection({ onNavigate }: CTASectionProps = {}) {
           <h2 className="md:text-5xl mb-6 text-gray-800 leading-tight font-clash font-bold text-[48px]">
             Join{" "}
             <motion.span
-              className="text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text relative"
+              className="text-transparent bg-linear-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               500+ Young Learners
               <motion.div
-                className="absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-yellow-300 via-pink-300 to-blue-300 opacity-60 rounded-full transform -rotate-1"
+                className="absolute -bottom-3 left-0 right-0 h-3 bg-linear-to-r from-yellow-300 via-pink-300 to-blue-300 opacity-60 rounded-full transform -rotate-1"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.8, type: "spring" }}
@@ -133,7 +133,7 @@ export function CTASection({ onNavigate }: CTASectionProps = {}) {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 viewport={{ once: true }}
               >
-                <div className={`bg-gradient-to-br ${item.color} p-3 rounded-full shadow-md`}>
+                <div className={`bg-linear-to-br ${item.color} p-3 rounded-full shadow-md`}>
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <span className="font-inter-tight font-semibold text-gray-700 text-center">{item.text}</span>
@@ -156,13 +156,13 @@ export function CTASection({ onNavigate }: CTASectionProps = {}) {
               <Button
                 size="lg"
                 onClick={() => onNavigate && onNavigate("contact")}
-                className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-5 rounded-full shadow-2xl text-lg font-inter-tight font-bold group border-4 border-white relative overflow-hidden"
+                className="bg-linear-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-5 rounded-full shadow-2xl text-lg font-inter-tight font-bold group border-4 border-white relative overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-yellow-400 to-orange-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
               </Button>
             </motion.div>
 
@@ -181,7 +181,7 @@ export function CTASection({ onNavigate }: CTASectionProps = {}) {
                 className="border-4 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white px-12 py-5 rounded-full shadow-2xl text-lg font-inter-tight font-bold bg-white/90 backdrop-blur-sm relative overflow-hidden group"
               >
                 <span className="relative z-10">View Programs</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </Button>
             </motion.div>
           </motion.div>
@@ -202,7 +202,7 @@ export function CTASection({ onNavigate }: CTASectionProps = {}) {
                 {[...Array(5)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className="w-7 h-7 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full border-2 border-white shadow-sm"
+                    className="w-7 h-7 bg-linear-to-br from-orange-400 to-pink-400 rounded-full border-2 border-white shadow-sm"
                     animate={{ y: [0, -2, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
                   />
